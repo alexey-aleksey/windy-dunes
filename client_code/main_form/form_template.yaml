@@ -3,7 +3,35 @@ container:
   properties:
     html: |-
       <center style="font-style:italic; color:#888; margin: 3em;">
-        (Insert your custom HTML here)
+            <body bgcolor="#ffffff" link="#003399" text="#000000" style="margin: 0;" onload="body_on_load();" onresize="on_resize()">
+
+              <img alt="..." src="background.JPG" width='100%' />
+
+              <div class="dynamic_container">
+                <div class="dynamic_content">
+                  <a class="dynamic_link" href="about.htm" >About</a>
+                </div>
+                <div class="dynamic_background">
+                </div>
+              </div>
+
+              <div class="dynamic_container">
+                <div class="dynamic_content">
+                  <a class="dynamic_link" href="./tool_bar/index.htm" >tool_bar</a>
+                </div>
+                <div class="dynamic_background">
+                </div>
+              </div>
+
+              <div class="dynamic_container">
+                <div class="dynamic_content">
+                  <a class="dynamic_link" href="./watches/index.htm" >watches</a>
+                </div>
+                <div class="dynamic_background">
+                </div>
+              </div>
+
+            </body>
       </center>
       <div anvil-slot="default"></div>
   type: HtmlTemplate

@@ -1,5 +1,13 @@
 unique_ids:
   assets:
+    background.JPG: '1753519515908364859240385.50464'
+    container.css: '1753519586151106683663682.6941'
+    dejavusansmono-webfont.eot: '1753519822398728464244388.3643'
+    dejavusansmono-webfont.svg: '1753519836065947281819491.5312'
+    dejavusansmono-webfont.ttf: '1753519848362777920610159.2372'
+    dejavusansmono-webfont.woff: '1753519863974497183197055.50507'
+    dynamic.css: '1753519878272262673490754.5657'
+    dynamic.js: '1753519899769434052960807.0212'
     standard-page.html: PAYJWHZ4ER4QSKJGKYN5NCU2ZQDPEUS7
     theme.css: JRP42ERJUE6TW4UUDHNTW7GN4CNNJIPH
   forms:

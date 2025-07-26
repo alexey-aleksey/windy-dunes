@@ -1,5 +1,10 @@
 allow_embedding: false
 name: Custom HTML 1
+native_deps:
+  head_html: |-
+    <link rel="stylesheet" href="_/theme/container.css">
+    <link rel="stylesheet" href="_/theme/dynamic.css">
+    <script type="text/javascript" src="_/theme/dynamic.js"></script>
 package_name: Custom_HTML_1
 runtime_options:
   client_version: '3'

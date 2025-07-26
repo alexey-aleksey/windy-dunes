@@ -1,0 +1,43 @@
+﻿   .container 
+   {
+    padding: 10px;
+    margin: 10px; 
+    position:absolute;
+    border-radius:8px;
+   -moz-border-radius:8px; /* Firefox 3.6 and earlier */   
+   }
+
+   .content 
+   {
+    position:relative;
+    z-index:5;
+    border-radius:8px;
+    -moz-border-radius:8px; /* Firefox 3.6 and earlier */       
+   }
+
+   .background 
+   {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:White;
+    z-index:1;
+    /* These three lines are for transparency in all browsers. */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    opacity:.60;
+    border-radius:8px;
+    -moz-border-radius:8px; /* Firefox 3.6 and earlier */       
+   }   
+
+pre {
+overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+/* width: 99%; */
+word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
