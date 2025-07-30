@@ -9,6 +9,7 @@
      
      function body_on_load()
       {
+        alert("body_on_load");
        var_scrollbar_width=getScrollbarWidth();
 
        calculate_window_size();
@@ -59,6 +60,7 @@
       
       function on_resize()
        {
+         alert("on_resize");
 //        calculate_window_size();
         setTimeout(calculate_window_size,10);
        }

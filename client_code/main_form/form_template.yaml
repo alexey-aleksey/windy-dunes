@@ -3,9 +3,9 @@ container:
   properties:
     html: |-
       <center style="font-style:italic; color:#888; margin: 3em;">
-            <body bgcolor="#ffffff" link="#003399" text="#000000" style="margin: 0;" onload="body_on_load();" onresize="on_resize()">
+            <div bgcolor="#ffffff" link="#003399" text="#000000" style="margin: 0;" onload="body_on_load();" onresize="on_resize()">
 
-              <img alt="..." src="background.JPG" width='100%' />
+              <img alt="..." src="_/theme/background.JPG" width='100%' />
 
               <div class="dynamic_container">
                 <div class="dynamic_content">
@@ -31,7 +31,7 @@ container:
                 </div>
               </div>
 
-            </body>
+            </div>
       </center>
       <div anvil-slot="default"></div>
   type: HtmlTemplate
