@@ -6,10 +6,14 @@
      var var_window_width = 630;
      var var_window_height = 460;
      var var_scrollbar_width=24;
+
+//     alert("dynamics.js");
      
      function body_on_load()
       {
-        alert("body_on_load");
+//        alert("body_on_load");
+       window.addEventListener('resize', on_resize);
+        
        var_scrollbar_width=getScrollbarWidth();
 
        calculate_window_size();
@@ -60,7 +64,7 @@
       
       function on_resize()
        {
-         alert("on_resize");
+//         alert("on_resize");
 //        calculate_window_size();
         setTimeout(calculate_window_size,10);
        }
