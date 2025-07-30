@@ -2,7 +2,7 @@ components: []
 container:
   properties:
     html: |-
-      <center style="font-style:italic; color:#888; margin: 3em;">
+      <center style="font-style:italic; color:#888; margin: 0;">
             <div bgcolor="#ffffff" link="#003399" text="#000000" style="margin: 0;" >
 
               <img alt="..." src="_/theme/background.JPG" width='100%' />

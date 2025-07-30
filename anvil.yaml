@@ -1,11 +1,12 @@
 allow_embedding: false
-name: Custom HTML 1
+metadata: {title: windy dunes}
+name: windy dunes
 native_deps:
   head_html: |-
     <link rel="stylesheet" href="_/theme/container.css">
     <link rel="stylesheet" href="_/theme/dynamic.css">
     <script type="text/javascript" src="_/theme/dynamic.js"></script>
-package_name: Custom_HTML_1
+package_name: windy_dunes
 runtime_options:
   client_version: '3'
   server_spec: {base: python310-minimal}
