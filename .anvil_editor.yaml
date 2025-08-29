@@ -1018,6 +1018,7 @@ unique_ids:
     standard-page.html: PAYJWHZ4ER4QSKJGKYN5NCU2ZQDPEUS7
     theme.css: JRP42ERJUE6TW4UUDHNTW7GN4CNNJIPH
   forms:
+    control_panel: '1756435890353308460765063.71'
     main_form: '1753518565442993500699766.5774'
   modules: {}
   scripts: {}

@@ -1,0 +1,7 @@
+components:
+- layout_properties: {grid_position: 'WULAMD,PXHRKO'}
+  name: xy_panel_1
+  properties: {height: 260}
+  type: XYPanel
+container: {type: ColumnPanel}
+is_package: true
