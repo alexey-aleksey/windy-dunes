@@ -9,7 +9,7 @@ native_deps:
 package_name: windy_dunes
 runtime_options:
   client_version: '3'
-  server_spec: {base: python310-datascience}
+  server_spec: {base: python310-machine-learning}
   server_spec_disabled: {base: python310-standard, requirements: stanza==1.10.1}
   server_version: python3-sandbox
   version: 2
