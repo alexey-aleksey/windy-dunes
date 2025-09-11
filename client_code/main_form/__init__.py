@@ -14,3 +14,5 @@ class main_form(main_formTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+  def fromjs_openform(self, **kwargs):
+    open_form('control_panel')

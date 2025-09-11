@@ -32,10 +32,7 @@ db_schema:
 metadata: {title: windy dunes}
 name: windy dunes
 native_deps:
-  head_html: |-
-    <link rel="stylesheet" href="_/theme/container.css">
-    <link rel="stylesheet" href="_/theme/dynamic.css">
-    <script type="text/javascript" src="_/theme/dynamic.js"></script>
+  head_html: "<link rel=\"stylesheet\" href=\"_/theme/container.css\">\n<link rel=\"stylesheet\" href=\"_/theme/dynamic.css\">\n<script type=\"text/javascript\" src=\"_/theme/dynamic.js\"></script>\n<script>\n  function open_login_form(e) \n  {\n   anvil.call(e.currentTarget, \"fromjs_openform\");\n   e.preventDefault();\n   return true;\n  }\n</script>"
 package_name: windy_dunes
 runtime_options:
   client_version: '3'
