@@ -22,5 +22,5 @@ class control_panel(control_panelTemplate):
     user = anvil.users.get_user()
 
     if user['role'] == 'admin':
-     open_form('admin')
+     open_form('admin_form')
     pass

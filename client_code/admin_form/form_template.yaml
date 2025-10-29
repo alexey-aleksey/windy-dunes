@@ -1,5 +1,15 @@
 components:
-- layout_properties: {grid_position: 'UJWYEB,DLVTMZ'}
+- components:
+  - layout_properties: {col_xs: 2, row: YPCKJN, width_xs: 4}
+    name: label_title
+    properties: {text: Admin panel}
+    type: Label
+  - event_bindings: {click: button_make_jsons_click}
+    layout_properties: {col_xs: 5, row: YDEORR, width_xs: 4}
+    name: button_make_jsons
+    properties: {text: Make jsons, tooltip: 'What ?'}
+    type: Button
+  layout_properties: {grid_position: 'UJWYEB,DLVTMZ'}
   name: grid_panel_main
   properties: {}
   type: GridPanel
