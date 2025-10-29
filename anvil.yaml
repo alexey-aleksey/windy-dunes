@@ -27,8 +27,18 @@ db_schema:
     - admin_ui: {order: 7, width: 200}
       name: signed_up
       type: datetime
+    - admin_ui: {width: 200}
+      name: email_confirmation_key
+      type: string
+    - admin_ui: {order: 9, width: 200}
+      name: role
+      type: string
     server: full
     title: Users
+dependencies:
+- dep_id: dep_6etwojf16clbcm
+  resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+  version: {version_tag: v3.5.0}
 metadata: {title: windy dunes}
 name: windy dunes
 native_deps:
