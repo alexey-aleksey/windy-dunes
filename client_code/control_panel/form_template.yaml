@@ -1,7 +1,13 @@
 components:
-- layout_properties: {grid_position: 'WULAMD,PXHRKO'}
-  name: xy_panel_1
-  properties: {height: 260}
-  type: XYPanel
+- components:
+  - event_bindings: {click: button_admin_click}
+    layout_properties: {col_xs: 1, row: KPRGWW, width_xs: 2}
+    name: button_admin
+    properties: {text: admin}
+    type: Button
+  layout_properties: {grid_position: 'VIDFZY,MBIIZJ'}
+  name: grid_panel_1
+  properties: {}
+  type: GridPanel
 container: {type: ColumnPanel}
 is_package: true
