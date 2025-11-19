@@ -1,3 +1,5 @@
+import anvil.files
+from anvil.files import data_files
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
 import anvil.tables as tables
@@ -12,6 +14,7 @@ import json
 import codecs
 
 import anvil.media
+import anvil.files
 
 from glob import glob
 
@@ -43,5 +46,21 @@ def stanza_phrases ():
     doc_name = str + ".json"
     doc = nlp(str)
     dict = doc.to_dict()
-    with codecs.open(doc_name, 'w', encoding='utf-8') as f:
-      json.dump(dict, f, ensure_ascii=False)
+    # with codecs.open(doc_name, 'w', encoding='utf-8') as f:
+    #   json.dump(dict, f, ensure_ascii=False)
+    save_json_to_app_files_classic(dict, doc_name)
+
+def save_json_to_app_files_classic(data, filename="data.json"):
+  # ensure_ascii=False → outputs actual UTF-8 characters (not \u escapes)
+  # indent=2 for pretty printing (optional)
+  json_string = json.dumps(data, ensure_ascii=False, indent=2)
+
+  # Important: explicitly encode as UTF-8 bytes
+  json_bytes = json_string.encode('utf-8')
+
+  media_object = anvil.media.BytesMedia(
+    json_bytes,
+    content_type="application/json",
+    filename=filename
+  )
+  anvil.files.app_files[filename] = media_object
