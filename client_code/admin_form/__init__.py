@@ -18,4 +18,5 @@ class admin_form(admin_formTemplate):
 
   def button_make_jsons_click(self, **event_args):
     """This method is called when the button is clicked"""
+    anvil.server.call('stanza_phrases')
     pass
