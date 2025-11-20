@@ -1,3 +1,4 @@
+import os
 import anvil.files
 from anvil.files import data_files
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
@@ -14,7 +15,6 @@ import json
 import codecs
 
 import anvil.media
-import anvil.files
 
 from glob import glob
 
@@ -36,7 +36,7 @@ from stanza.pipeline.core import DownloadMethod
 #
 
 @anvil.server.callable
-def stanza_phrases ():
+def stanza_phrases_old ():
   files = glob('_/theme/phrases/*.aac')
   files.extend(glob('_/theme/phrases/*.m4a'))
   nlp = stanza.Pipeline('uk', download_method=DownloadMethod.REUSE_RESOURCES)
@@ -64,3 +64,23 @@ def save_json_to_app_files_classic(data, filename="data.json"):
     filename=filename
   )
   anvil.files.app_files[filename] = media_object
+
+@anvil.server.callable
+def stanza_phrases ():  
+  nlp = stanza.Pipeline('uk', download_method=DownloadMethod.REUSE_RESOURCES)
+  
+  files_in_folder = anvil.files.list_files("phrases")
+  for f in files_in_folder:
+    str = os.path.splitext(f.name)[0]
+    doc_name = str + ".json"
+    doc_full_name = "json/" + doc_name
+    doc = nlp(str)
+    dict = doc.to_dict()
+    # ensure_ascii=False → outputs actual UTF-8 characters (not \u escapes)
+    # indent=2 for pretty printing (optional)
+    json_string = json.dumps(dict, ensure_ascii=False, indent=2)
+
+    # Important: explicitly encode as UTF-8 bytes
+    json_bytes = json_string.encode('utf-8')
+
+    anvil.files.write(doc_full_name, json_bytes)
